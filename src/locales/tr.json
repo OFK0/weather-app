@@ -1,9 +1,33 @@
 {
   "common": {
-    "search": "Arama",
+    "search": "Ara",
     "loading": "Yükleniyor...",
     "messages": {
-      "no-history-item": "Geçmişte hiç bir şey yok"
+      "no-history-item": "Burada hiç geçmiş öğesi yok."
+    },
+    "in-history": "geçmişten"
+  },
+  "detail-template": {
+    "detail-template": {
+      "formatted-wind-speed": "{value} km/s",
+      "wind-speed": "Rüzgar Hızı",
+      "humidity": "Nem",
+      "feels-like": "Hissedilen",
+      "visibility": "Görüş Mesafesi",
+      "pressure": "Basınç",
+      "sunrise": "Gündoğumu",
+      "today-overview": "Bugün Genel Bakış",
+      "next-seven-days": "Sonraki 7 Gün"
     }
+  },
+  "errors": {
+    "search-error": "Arama yapılırken bir hata oluştu"
+  },
+  "not-found-page": {
+    "title": "Sayfa Bulunamadı",
+    "go-to-homepage": "Anasayfaya Dön"
+  },
+  "search": {
+    "no-results": "Hiç sonuç yok"
   }
 }

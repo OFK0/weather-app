@@ -4,7 +4,8 @@
     "loading": "Loading...",
     "messages": {
       "no-history-item": "There is no history item here."
-    }
+    },
+    "in-history": "from history"
   },
   "detail-template": {
     "detail-template": {
@@ -16,10 +17,17 @@
       "pressure": "Pressure",
       "sunrise": "Sunrise",
       "today-overview": "Today Overview",
-      "next-five-days": "Next 5 Days"
+      "next-seven-days": "Next 7 Days"
     }
   },
   "errors": {
     "search-error": "An error occurred while searching"
+  },
+  "not-found-page": {
+    "title": "Page Not Found",
+    "go-to-homepage": "Go to Homepage"
+  },
+  "search": {
+    "no-results": "No results"
   }
 }
