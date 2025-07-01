@@ -6,7 +6,7 @@ export default async function Home() {
 
   async function fetchDefaultLocation() {
     const res = await fetch(
-      `${process.env.WEATHERAPI_BASEURL}/forecast.json?key=${process.env.WEATHERAPI_APIKEY}&lang=${locale}&days=7&aqi=no&alerts=no&q=${process.env?.WEATHERAPI_DEFAULT_LOCATION || 'London'}`,
+      `${process.env.WEATHERAPI_BASEURL}/forecast.json?key=${process.env.WEATHERAPI_APIKEY}&lang=${locale}&days=7&aqi=no&alerts=no&q=${process.env?.WEATHERAPI_DEFAULT_LOCATION || 'Istanbul'}`,
       {
         next: { revalidate: 60 },
         cache: 'force-cache',
