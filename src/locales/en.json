@@ -1,5 +1,25 @@
 {
   "common": {
-    "search": "Search"
+    "search": "Search",
+    "loading": "Loading...",
+    "messages": {
+      "no-history-item": "There is no history item here."
+    }
+  },
+  "detail-template": {
+    "detail-template": {
+      "formatted-wind-speed": "{value} km/h",
+      "wind-speed": "Wind Speed",
+      "humidity": "Humidity",
+      "feels-like": "Feels Like",
+      "visibility": "Visibility",
+      "pressure": "Pressure",
+      "sunrise": "Sunrise",
+      "today-overview": "Today Overview",
+      "next-five-days": "Next 5 Days"
+    }
+  },
+  "errors": {
+    "search-error": "An error occurred while searching"
   }
 }

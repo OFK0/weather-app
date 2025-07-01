@@ -1,5 +1,9 @@
 {
   "common": {
-    "search": "Arama"
+    "search": "Arama",
+    "loading": "Yükleniyor...",
+    "messages": {
+      "no-history-item": "Geçmişte hiç bir şey yok"
+    }
   }
 }
