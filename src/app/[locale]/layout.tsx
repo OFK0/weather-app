@@ -36,12 +36,15 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="h-full">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
       <body className={`${geistSans.variable} antialiased h-full`}>
         <NextIntlClientProvider>
           <WeatherStoreProvider>
             <Header />
-            <div className="h-[calc(100vh-70px)]">
-              <div className="container mx-auto mt-4">{children}</div>
+            <div className="min-h-[calc(100vh-70px)]">
+              <div className="container mx-auto pt-4">{children}</div>
             </div>
             <Toaster />
           </WeatherStoreProvider>

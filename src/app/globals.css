@@ -21,3 +21,7 @@ a,
 button {
   @apply transition-colors duration-200 ease-in-out;
 }
+
+.container {
+  @apply px-4;
+}
