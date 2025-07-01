@@ -1,5 +1,3 @@
-import WeatherConditionData from '@/data/weather-conditions.json';
-
 // Weather condition gradients for day and night
 export const weatherGradients = {
   // Code 1000 - Sunny/Clear
