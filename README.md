@@ -218,3 +218,34 @@ Language switching is automatic based on user preference and can be manually cha
 4. **User Location**: Assumed users are comfortable with manual location search rather than implementing geolocation (privacy considerations).
 
 5. **Language Support**: Started with English and Turkish, with architecture allowing easy addition of more languages.
+
+## Contributing
+
+The project follow semantic commit conventions to maintain a clean and meaningful commit history. This helps with automated changelog generation and better project maintenance.
+
+### Commit Message Format
+
+Each commit message should follow this structure:
+
+```text
+<type>: <description>
+```
+
+### Commit Types
+
+- **feat**: A new feature for the user
+- **fix**: A bug fix for the user
+- **docs**: Documentation changes
+- **style**: Code style changes (formatting, missing semicolons, etc.)
+- **refactor**: Code refactoring without changing functionality
+- **perf**: Performance improvements
+- **test**: Adding or updating tests
+- **build**: Changes to build system or dependencies
+- **ci**: Changes to CI/CD configuration
+- **chore**: Other changes that don't modify src or test files
+- **revert**: Reverts a previous commit
+
+### Example
+
+- feat: profile page
+- style: missing semicolons
