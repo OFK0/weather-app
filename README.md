@@ -1,36 +1,220 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Weather App
 
-## Getting Started
+A modern, responsive weather application built with Next.js 15, featuring real-time weather data, internationalization support, and a beautiful user interface.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- 🌤️ Real-time weather data with detailed forecasts
+- 🌍 Internationalization support (English & Turkish)
+- 📱 Responsive design with mobile-first approach
+- 🔍 Location search with autocomplete
+- 📈 7-day weather forecast
+- ⚡ Fast and optimized with Next.js App Router
+- 🎨 Beautiful UI with Tailwind CSS and Framer Motion animations
+- 💾 Local storage for search history and preferences
+- 🌡️ Temperature unit conversion (Celsius/Fahrenheit)
+
+## Tech Stack
+
+- **Framework:** Next.js 15.3.4 with App Router
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **State Management:** Zustand
+- **Animations:** Framer Motion
+- **Internationalization:** next-intl
+- **Data Fetching:** SWR
+- **Icons:** Lucide React
+- **Date/Time:** Day.js
+- **Notifications:** Sonner
+
+## Prerequisites
+
+- Node.js 18+
+- npm, yarn, pnpm, or bun
+- WeatherAPI.com API key
+
+## API Keys Required
+
+This project requires a WeatherAPI.com API key to function properly.
+
+1. Sign up for a free account at [WeatherAPI.com](https://www.weatherapi.com/)
+2. Get your API key from the dashboard
+
+## Installation & Setup
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone <repository-url>
+   cd weather-app
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   # or
+   bun install
+   ```
+
+3. **Set up environment variables:**
+
+   ```bash
+   cp .env.example .env.local
+   ```
+
+   Edit `.env.local` and add your API key:
+
+   ```bash
+   WEATHERAPI_APIKEY=your_actual_api_key_here
+   WEATHERAPI_BASEURL=https://api.weatherapi.com/v1
+   WEATHERAPI_DEFAULT_LOCATION=Istanbul
+   ```
+
+4. **Run the development server:**
+
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   # or
+   bun dev
+   ```
+
+5. **Open your browser:**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## Available Scripts
+
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build the application for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
+
+## Project Structure
+
+```text
+src/
+├── app/                    # App Router pages and API routes
+│   ├── [locale]/          # Internationalized routes
+│   │   ├── weather/       # Weather detail pages
+│   │   └── [...rest]/     # Catch-all route for 404s
+│   └── api/               # API routes
+│       └── search/        # Location search endpoint
+├── components/            # Reusable UI components
+│   ├── button/
+│   ├── detail-template/   # Weather detail components
+│   ├── header/            # Header with search and controls
+│   ├── stat-card/         # Weather statistics cards
+│   └── weather-card/      # Weather display cards
+├── data/                  # Static data files
+├── hooks/                 # Custom React hooks
+├── i18n/                  # Internationalization configuration
+├── lib/                   # Library configurations
+├── locales/               # Translation files
+├── providers/             # React context providers
+├── stores/                # Zustand stores
+├── types/                 # TypeScript type definitions
+└── utils/                 # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Environment Variables
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Variable                      | Description                       | Required | Default                         |
+| ----------------------------- | --------------------------------- | -------- | ------------------------------- |
+| `WEATHERAPI_APIKEY`           | Your WeatherAPI.com API key       | ✅       | -                               |
+| `WEATHERAPI_BASEURL`          | WeatherAPI base URL               | ✅       | `https://api.weatherapi.com/v1` |
+| `WEATHERAPI_DEFAULT_LOCATION` | Default location for weather data | ❌       | `Istanbul`                      |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Internationalization
 
-## Learn More
+The app supports multiple languages:
 
-To learn more about Next.js, take a look at the following resources:
+- English (en) - Default
+- Turkish (tr)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Language switching is automatic based on user preference and can be manually changed using the language switcher in the header.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
+### Vercel (Recommended)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Push your code to GitHub/GitLab/Bitbucket
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Add environment variables in Vercel dashboard
+4. Deploy automatically on every push
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Other Platforms
+
+1. Build the application:
+
+   ```bash
+   npm run build
+   ```
+
+2. Start the production server:
+
+   ```bash
+   npm run start
+   ```
+
+## Assumptions & Design Decisions
+
+### Technical Decisions
+
+1. **Next.js App Router**: Chose the new App Router over Pages Router for better performance, streaming, and modern React features like Server Components.
+
+2. **Zustand for State Management**: Selected over Redux/Context API for its simplicity and minimal boilerplate while providing powerful state management capabilities.
+
+3. **SWR for Data Fetching**: Implemented for its excellent caching, revalidation, and error handling features, particularly useful for weather data that needs periodic updates.
+
+4. **TypeScript**: Used throughout the project for better developer experience, type safety, and reduced runtime errors.
+
+5. **Tailwind CSS 4**: Chose for rapid development, utility-first approach, and excellent responsive design capabilities.
+
+6. **next-intl**: Selected for robust internationalization support with server-side rendering compatibility.
+
+### UX/UI Decisions
+
+1. **Mobile-First Design**: Prioritized mobile experience as weather apps are frequently accessed on mobile devices.
+
+2. **Search History**: Implemented persistent search history (limited to 5 items) for better user experience and quick access to frequently checked locations.
+
+3. **Unit Preferences**: Added temperature unit switching with persistence to accommodate global users.
+
+4. **Loading States**: Implemented comprehensive loading states and error handling for better perceived performance.
+
+5. **Animations**: Used Framer Motion sparingly for subtle, meaningful animations that enhance UX without being distracting.
+
+### API Design Decisions
+
+1. **Server-Side API Routes**: Created Next.js API routes to proxy WeatherAPI calls, keeping API keys secure and enabling request modification.
+
+2. **Minimum Query Length**: Implemented 4-character minimum for search queries to reduce API calls and improve search relevance.
+
+3. **Error Handling**: Added comprehensive error handling with user-friendly messages and fallback states.
+
+### Performance Optimizations
+
+1. **Turbopack**: Enabled for faster development builds.
+2. **Image Optimization**: Used Next.js Image component for weather icons.
+3. **Code Splitting**: Leveraged automatic code splitting from Next.js App Router.
+4. **Local Storage**: Used for non-critical data (preferences, history) to reduce API calls.
+
+### Assumptions
+
+1. **Weather API Reliability**: Assumed WeatherAPI.com provides reliable, up-to-date weather data with good global coverage.
+
+2. **Browser Support**: Targeted modern browsers with ES6+ support, assuming users have updated browsers for web app usage.
+
+3. **Data Freshness**: Assumed that weather data doesn't need real-time updates beyond what SWR provides with its revalidation strategies.
+
+4. **User Location**: Assumed users are comfortable with manual location search rather than implementing geolocation (privacy considerations).
+
+5. **Language Support**: Started with English and Turkish, with architecture allowing easy addition of more languages.
