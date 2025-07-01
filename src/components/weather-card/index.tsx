@@ -32,10 +32,10 @@ export function WeatherCard({
       }}
     >
       <div className="flex flex-col gap-1 mb-4 relative z-10">
-        <h2 className="text-5xl font-semibold">
+        <h2 className="text-3xl lg:text-4xl xl:text-5xl font-semibold">
           {temp} {selectedUnit === 'c' ? '°C' : '°F'}
         </h2>
-        <h3 className="text-xl font-semibold flex items-center gap-2">
+        <h3 className="text-lg lg:text-xl font-semibold flex items-center gap-2">
           {icon} {name}
         </h3>
       </div>

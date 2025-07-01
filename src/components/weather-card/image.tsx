@@ -15,7 +15,7 @@ const WeatherImage = memo(({ conditionCode, isDay }: WeatherImageProps) => {
   const attributes = {
     width: 72,
     height: 72,
-    className: 'absolute top-2 right-4',
+    className: 'absolute top-2 right-4 md:right-1',
   };
 
   function getWeatherCondition(conditionCode: number) {

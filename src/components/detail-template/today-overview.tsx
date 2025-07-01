@@ -28,8 +28,8 @@ export function TodayOverview({ data }: TodayOverviewProps) {
 
   return (
     <>
-      <h2 className="text-2xl font-semibold mb-4">{t('detail-template.today-overview')}</h2>
-      <div className="grid grid-cols-4 gap-4 items-stretch">
+      <h2 className="text-xl lg:text-2xl font-semibold mb-4">{t('detail-template.today-overview')}</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 items-stretch">
         <WeatherCard
           isDay={data.current.is_day as 0 | 1}
           conditionCode={data.current.condition.code}
@@ -56,7 +56,7 @@ export function TodayOverview({ data }: TodayOverviewProps) {
         />
         <StatCard
           icon={<EyeIcon size={48} />}
-          value={`${data.current.vis_km}km`}
+          value={`${data.current.vis_km} km`}
           name={t('detail-template.visibility')}
         />
         <StatCard

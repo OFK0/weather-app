@@ -4,4 +4,6 @@ import dayjs from 'dayjs';
 import 'dayjs/locale/en';
 import 'dayjs/locale/tr';
 
+dayjs.locale('en');
+
 export default dayjs;
