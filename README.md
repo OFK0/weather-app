@@ -30,7 +30,7 @@ A modern, responsive weather application built with Next.js 15, featuring real-t
 ## Prerequisites
 
 - Node.js 18+
-- npm, yarn, pnpm, or bun
+- npm, yarn, pnpm
 - WeatherAPI.com API key
 
 ## API Keys Required
@@ -57,8 +57,6 @@ This project requires a WeatherAPI.com API key to function properly.
    yarn install
    # or
    pnpm install
-   # or
-   bun install
    ```
 
 3. **Set up environment variables:**
