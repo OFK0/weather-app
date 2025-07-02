@@ -181,7 +181,9 @@ export function Search() {
               className="absolute top-full left-0 w-full bg-white border border-gray-200 rounded mt-1 p-2 z-20"
               ref={noResultDivRef}
             >
-              <div className="flex items-center justify-center py-4">{t('search.no-results')}</div>
+              <div className="flex items-center justify-center py-4">
+                {isValidating ? t('common.loading') : t('search.no-results')}
+              </div>
             </div>
           </motion.div>
         ) : null}
