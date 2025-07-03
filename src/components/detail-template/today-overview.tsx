@@ -72,7 +72,7 @@ export function TodayOverview({ data }: TodayOverviewProps) {
         <StatCard
           icon={<SunsetIcon size={48} />}
           value={dayjs(`${dayjs().format(`DD/MM/YYYY`)} ${getCurrentDayForecast()?.astro.sunset}`).format('HH:mm')}
-          name={t('detail-template.sunrise')}
+          name={t('detail-template.sunset')}
         />
       </div>
     </>

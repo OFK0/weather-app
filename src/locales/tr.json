@@ -15,9 +15,10 @@
       "feels-like": "Hissedilen",
       "visibility": "Görüş Mesafesi",
       "pressure": "Basınç",
-      "sunrise": "Gündoğumu",
+      "sunrise": "Gün Doğumu",
       "today-overview": "Bugün Genel Bakış",
-      "next-seven-days": "Sonraki 7 Gün"
+      "next-seven-days": "Sonraki 7 Gün",
+      "sunset": "Gün Batımı"
     }
   },
   "errors": {

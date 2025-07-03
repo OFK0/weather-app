@@ -17,7 +17,8 @@
       "pressure": "Pressure",
       "sunrise": "Sunrise",
       "today-overview": "Today Overview",
-      "next-seven-days": "Next 7 Days"
+      "next-seven-days": "Next 7 Days",
+      "sunset": "Sunset"
     }
   },
   "errors": {
